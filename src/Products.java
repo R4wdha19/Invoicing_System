@@ -29,9 +29,21 @@ public class Products {
 	public static void deleteProduct() {
 		System.out.println(" Please Provide Us With The Name Of The Product That Is Out " + " Of Stock ! ");
 		String productName = scanner.next();
-		String sqlQueryToInsert = "  delete from Items where itemName = '" + productName + "'";
-		Constants.executingOfQurey(sqlQueryToInsert);
+		String sqlQueryToDelete = "  delete from Items where itemName = '" + productName + "'";
+		Constants.executingOfQurey(sqlQueryToDelete);
+		System.out.println(" ");
 
 	}
+
+	public static void updateProductPrice() {
+		System.out.println(" Please Provide Us With The Name Of The Product That Is On Discount !! ");
+		String productName = scanner.next();
+		String sqlQueryToUpdate = "  Update  from Items where itemName = '" + productName + "'";
+		Constants.executingOfQurey(sqlQueryToUpdate);
+
+
+	}
+
+
 
 }
