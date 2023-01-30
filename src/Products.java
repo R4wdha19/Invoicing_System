@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Products {
 	public static Scanner scanner = new Scanner(System.in);
 
-	public static void productsDetails() {
+	public static void insertProductsDetails() {
 
 		System.out.println(" Enter The Number Of Products You Would Like To Add ");
 		int numberOfProducts = scanner.nextInt();
@@ -18,11 +18,20 @@ public class Products {
 			int productQuantityPrice = scanner.nextInt();
 
 			String sqlQueryToInsert = "  INSERT INTO Items (itemName,unitPrice,quantity,quantityAmount)" + " VALUES ( '"
-					+ productName + "'," + " ' " + productPrice + "','" + productAvailableQuantity + "'" + ",'"
-					+ productQuantityPrice + "'" + ") ";
+					+ productName + "'," + productPrice + "," + productAvailableQuantity + "," + productQuantityPrice
+					+ ") ";
 			Constants.executingOfQurey(sqlQueryToInsert);
 
 		}
 
 	}
+
+	public static void deleteProduct() {
+		System.out.println(" Please Provide Us With The Name Of The Product That Is Out " + " Of Stock ! ");
+		String productName = scanner.next();
+		String sqlQueryToInsert = "  delete from Items where itemName = '" + productName + "'";
+		Constants.executingOfQurey(sqlQueryToInsert);
+
+	}
+
 }
