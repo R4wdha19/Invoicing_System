@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Invoices {
-	public static void shopInvoicesDetails() {
+public class Shop {
+	public static void shopDetails() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(" Whate Is The Name Of The Shop ? ");
 		String shopName = scanner.next();

@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Constants {
@@ -38,5 +39,23 @@ public class Constants {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public static void executingOfQurey(String sql) {
+
+		try {
+			Statement st = con.createStatement();
+			int executing = st.executeUpdate(sql);
+			System.out.println(sql);
+			if (executing > 0) {
+				System.out.println("Successful : " + sql);
+			} else {
+				System.out.println("Failed");
+			}
+		} catch (Exception ex) {
+
+			System.err.println(ex);
+		}
+
 	}
 }

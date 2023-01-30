@@ -24,7 +24,7 @@ public class Main {
 				ShopItemManagement.manageShopMenu();
 				break;
 			case 3:
-				Products.establishADataBaseConnection();
+
 				break;
 			case 4:
 				Products.productsDetails();

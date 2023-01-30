@@ -1,10 +1,33 @@
+import java.util.Scanner;
+
 public class ShopSettings {
-    public static void shopSettingsMenu(){
-        System.out.println("Here Are The Settings Of Our System, Please Choose What You Want To Do :");
-        System.out.println(" 1 - Add A New Shop ");
-        System.out.println(" 2 - Load The Shop Data ");
-        System.out.println(" 3 - Set The Invoice Header ");
-        System.out.println(" 4 - Go Back To The Main Menu");
-    }
+	static Scanner scanner = new Scanner(System.in);
+
+	public static void shopSettingsMenu() {
+		System.out.println("Here Are The Settings Of Our System, Please Choose What You Want To Do :");
+		System.out.println(" 1 - Add A New Shop ");
+		System.out.println(" 2 - Load The Shop Data ");
+		System.out.println(" 3 - Set The Invoice Header ");
+		System.out.println(" 4 - Go Back To The Main Menu");
+
+		int input = scanner.nextInt();
+		switch (input) {
+		case 1:
+			ShopSettings.shopSettingsMenu();
+			break;
+		case 2:
+			ShopItemManagement.manageShopMenu();
+			break;
+		case 3:
+
+			break;
+		case 4:
+			Products.productsDetails();
+			break;
+		case 5:
+		case 6:
+		case 7:
+		}
+	}
 
 }
