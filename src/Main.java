@@ -27,7 +27,7 @@ public class Main {
 
 				break;
 			case 4:
-				Products.productsDetails();
+				Products.insertProductsDetails();
 				break;
 			case 5:
 			case 6:

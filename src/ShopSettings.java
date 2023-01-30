@@ -13,16 +13,16 @@ public class ShopSettings {
 		int input = scanner.nextInt();
 		switch (input) {
 		case 1:
-			ShopSettings.shopSettingsMenu();
+
 			break;
 		case 2:
-			ShopItemManagement.manageShopMenu();
+			Shop.insertShopDetails();
 			break;
 		case 3:
 
 			break;
 		case 4:
-			Products.productsDetails();
+			Products.insertProductsDetails();
 			break;
 		case 5:
 		case 6:
