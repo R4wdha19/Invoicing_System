@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Products {
@@ -57,6 +58,20 @@ public class Products {
 			String sqlQueryToInsert = "  INSERT INTO Items (itemName,unitPrice,quantity,quantityAmount)" + " VALUES ( '"
 					+ productName + "'," + " ' " + productPrice + "','" + productAvailableQuantity + "'" + ",'"
 					+ productQuantityPrice + "'" + ") ";
+			try {
+				Statement st = con.createStatement();
+				int executing = st.executeUpdate(sqlQueryToInsert);
+				if (executing >= 0) {
+					System.out.println("Inserted Successfully : " + sqlQueryToInsert);
+				} else {
+					System.out.println(" Failed To Insert");
+				}
+
+//                closingConnection();
+			} catch (Exception ex) {
+
+				System.err.println(ex);
+			}
 		}
 
 	}
