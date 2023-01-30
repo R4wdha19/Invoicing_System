@@ -17,10 +17,16 @@ public class Main {
 		switch (input) {
 		case 1:
 			ShopSettings.shopSettingsMenu();
+			break;
 		case 2:
 			ShopItemManagement.manageShopMenu();
+			break;
 		case 3:
+			Products.establishADataBaseConnection();
+			break;
 		case 4:
+			Products.productsDetails();
+			break;
 		case 5:
 		case 6:
 		case 7:
