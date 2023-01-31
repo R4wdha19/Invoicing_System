@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Shop {
+	static Scanner scanner = new Scanner(System.in);
+
 	public static void insertShopDetails() {
-		Scanner scanner = new Scanner(System.in);
+
 		System.out.println(" What Is The Name Of The Shop ? ");
 		String shopName = scanner.next();
 		System.out.println(" What Is The Location Of The Shop ? ");
@@ -20,19 +22,22 @@ public class Shop {
 				+ shopContactNumber + "," + shopFax + ",'" + shopEmail + "','" + shopWebsite + "'" + ") ";
 		Constants.executingOfUpdate(sqlQueryToInsert);
 
-//		executing/.
-//		
-//		
-//		
-//		
-//		ResultSet rs = Constants.executingOfQurey(sqlQueryToInsert);
-//		try {
-//			System.out.print(" A New Shop Has Been Added These Are The Details Of It :" + rs.getString(shopName));
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
 	}
 
+	public static void UpdateInvoiceHeader() {
+		System.out.println("What Is The Id Of The Shop To Be Updated ");
+		int shopId = scanner.nextInt();
+		System.out.println(" What Is The New Shop Contact Number ? ");
+		int newShopContactNumber = scanner.nextInt();
+		System.out.println(" What Is The Shop Fax Number ?");
+		int newShopFax = scanner.nextInt();
+		System.out.println(" What Is The New Shop Email ? ");
+		String newShopEmail = scanner.next();
+		System.out.println(" What Is The New Shop Website ? ");
+		String newShopWebsite = scanner.next();
+		String sqlQueryToUpdate = " update shop SET shopContactNumber = " + newShopContactNumber + "," + newShopFax
+				+ ",'" + newShopEmail + "','" + newShopWebsite + "'" + "where id = " + shopId;
+		Constants.executingOfUpdate(sqlQueryToUpdate);
+
+	}
 }
