@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
@@ -42,6 +43,22 @@ public class Constants {
 	}
 
 	public static void executingOfQurey(String sql) {
+
+		try {
+			Statement st = con.createStatement();
+			ResultSet executing = st.executeQuery(sql);
+			System.out.println(sql);
+			while (executing.next()) {
+				System.out.println("Successful : " + sql);
+			}
+		} catch (Exception ex) {
+
+			System.err.println(ex);
+		}
+
+	}
+
+	public static void executingOfUpdate(String sql) {
 
 		try {
 			Statement st = con.createStatement();

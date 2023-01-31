@@ -30,7 +30,7 @@ public class Products {
 		System.out.println(" Please Provide Us With The Name Of The Product That Is Out " + " Of Stock ! ");
 		String productName = scanner.next();
 		String sqlQueryToDelete = "  delete from Items where itemName = '" + productName + "'";
-		Constants.executingOfQurey(sqlQueryToDelete);
+		Constants.executingOfUpdate(sqlQueryToDelete);
 		System.out.println(" ");
 
 	}
@@ -39,11 +39,8 @@ public class Products {
 		System.out.println(" Please Provide Us With The Name Of The Product That Is On Discount !! ");
 		String productName = scanner.next();
 		String sqlQueryToUpdate = "  Update  from Items where itemName = '" + productName + "'";
-		Constants.executingOfQurey(sqlQueryToUpdate);
-
+		Constants.executingOfUpdate(sqlQueryToUpdate);
 
 	}
-
-
 
 }
