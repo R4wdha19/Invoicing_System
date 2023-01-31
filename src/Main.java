@@ -28,14 +28,20 @@ public class Main {
 				ShopItemManagement.manageShopMenu();
 				break;
 			case 3:
-
+				Invocies.insertInvoiceDetails();
 				break;
 			case 4:
-				Products.insertProductsDetails();
+				Reports.reportsMenu();
 				break;
 			case 5:
+				Invocies.searchInvoice();
+				break;
+
 			case 6:
+				break;
+
 			case 7:
+				break;
 			}
 		}
 	}
