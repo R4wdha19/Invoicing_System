@@ -22,7 +22,7 @@ public class ShopSettings {
 
 			break;
 		case 4:
-			Products.insertProductsDetails();
+
 			break;
 		case 5:
 		case 6:
