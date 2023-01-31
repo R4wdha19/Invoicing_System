@@ -22,7 +22,7 @@ public class ShopItemManagement {
 			Products.updateProductPrice();
 			break;
 		case 4:
-//Still working on it 
+			Main.mainMenu();
 			break;
 
 		}

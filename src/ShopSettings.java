@@ -32,7 +32,7 @@ public class ShopSettings {
 			Shop.UpdateInvoiceHeader();
 			break;
 		case 4:
-// will be updated
+			Main.mainMenu();
 			break;
 
 		}

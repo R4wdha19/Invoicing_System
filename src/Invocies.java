@@ -9,7 +9,7 @@ public class Invocies {
 
 		System.out.println(" What Is The Customer Id ? ");
 		int CustomerId = scanner.nextInt();
-		System.out.println(" What Is The Date Of The Invoice ? ");
+		System.out.println(" What Is The Date Of The Invoice  ? ");
 		String invoiceDate = scanner.next();
 		System.out.println(" What Is The number Of Items? ");
 		int numberOfItems = scanner.nextInt();

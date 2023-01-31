@@ -53,3 +53,5 @@ drop table Invoice;
 drop table Items;
 drop table shop;
 
+
+Alter table Invoice ALTER COLUMN invoiceDate VARCHAR (10);

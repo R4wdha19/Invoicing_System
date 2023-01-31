@@ -1,10 +1,15 @@
 import java.util.Scanner;
 
 public class Main {
+	static Scanner scanner = new Scanner(System.in);
+	static boolean mainMenu = true;
+
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
-		boolean mainMenu = true;
+		Main.mainMenu();
+	}
+
+	public static void mainMenu() {
 		while (mainMenu) {
 			System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
 			System.out.println(" 0 - Start By Establishing A DataBase Connection To Load Your Data ");
@@ -28,7 +33,14 @@ public class Main {
 				ShopItemManagement.manageShopMenu();
 				break;
 			case 3:
-				Invocies.insertInvoiceDetails();
+				System.out
+						.println(" Are You Creating An Invoice For A New Customer ?" + "If Yes Press 1 If No Press 2 ");
+				int userInput = scanner.nextInt();
+				if (userInput == 1) {
+					Customer.insertCustomerDetails();
+				} else {
+					Invocies.insertInvoiceDetails();
+				}
 				break;
 			case 4:
 				Reports.reportsMenu();
@@ -36,11 +48,11 @@ public class Main {
 			case 5:
 				Invocies.searchInvoice();
 				break;
-
 			case 6:
 				break;
 
 			case 7:
+				System.exit(0);
 				break;
 			}
 		}
