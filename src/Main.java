@@ -38,9 +38,9 @@ public class Main {
 				int userInput = scanner.nextInt();
 				if (userInput == 1) {
 					Customer.insertCustomerDetails();
-				} else {
-					Invocies.insertInvoiceDetails();
 				}
+				Invocies.insertInvoiceDetails();
+
 				break;
 			case 4:
 				Reports.reportsMenu();
@@ -49,6 +49,7 @@ public class Main {
 				Invocies.searchInvoice();
 				break;
 			case 6:
+				System.out.println("Still Working On It SORRY !!  ");
 				break;
 
 			case 7:

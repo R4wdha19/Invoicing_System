@@ -12,8 +12,8 @@ public class Customer {
 		System.out.println(" What Is The Customer Payment Method? ");
 		String customerPaymentMethod = scanner.next();
 
-		String sqlQueryToInsert = "INSERT INTO Customers VALUES ( '" + customerName + "'," + customerContactNumber + ","
-				+ customerPaymentMethod + ") ";
+		String sqlQueryToInsert = "INSERT INTO Customers VALUES ( '" + customerName + "'," + customerContactNumber
+				+ ",'" + customerPaymentMethod + "'" + ") ";
 		Constants.executingOfUpdate(sqlQueryToInsert);
 
 	}
