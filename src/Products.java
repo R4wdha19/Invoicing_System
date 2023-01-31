@@ -20,7 +20,7 @@ public class Products {
 			String sqlQueryToInsert = "  INSERT INTO Items (itemName,unitPrice,quantity,quantityAmount)" + " VALUES ( '"
 					+ productName + "'," + productPrice + "," + productAvailableQuantity + "," + productQuantityPrice
 					+ ") ";
-			Constants.executingOfQurey(sqlQueryToInsert);
+			Constants.executingOfUpdate(sqlQueryToInsert);
 
 		}
 

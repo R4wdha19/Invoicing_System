@@ -13,10 +13,11 @@ public class ShopSettings {
 		int input = scanner.nextInt();
 		switch (input) {
 		case 1:
-
+			Shop.insertShopDetails();
 			break;
 		case 2:
-			Shop.insertShopDetails();
+			System.out.println(" What Would You Like To Load ?");
+
 			break;
 		case 3:
 

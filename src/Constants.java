@@ -42,19 +42,19 @@ public class Constants {
 		}
 	}
 
-	public static void executingOfQurey(String sql) {
-
+	public static ResultSet executingOfQurey(String sql) {
+		ResultSet executing = null;
 		try {
 			Statement st = con.createStatement();
-			ResultSet executing = st.executeQuery(sql);
-			System.out.println(sql);
-			while (executing.next()) {
-				System.out.println("Successful : " + sql);
-			}
+			executing = st.executeQuery(sql);
+
+			System.out.println("Successful : " + sql);
+
 		} catch (Exception ex) {
 
 			System.err.println(ex);
 		}
+		return executing;
 
 	}
 

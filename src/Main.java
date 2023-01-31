@@ -7,6 +7,7 @@ public class Main {
 		boolean mainMenu = true;
 		while (mainMenu) {
 			System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
+			System.out.println(" 0 - Start By Establishing A DataBase Connection To Load Your Data ");
 			System.out.println(" 1 - Shop Settings");
 			System.out.println(" 2 - Shop Management ");
 			System.out.println(" 3 - Create A New Invoice ");
@@ -17,6 +18,9 @@ public class Main {
 
 			int input = scanner.nextInt();
 			switch (input) {
+			case 0:
+				Constants.establishADataBaseConnection();
+				break;
 			case 1:
 				ShopSettings.shopSettingsMenu();
 				break;

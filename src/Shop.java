@@ -18,7 +18,20 @@ public class Shop {
 
 		String sqlQueryToInsert = "  INSERT INTO shop VALUES ( '" + shopName + "'," + " ' " + shopLocation + "',"
 				+ shopContactNumber + "," + shopFax + ",'" + shopEmail + "','" + shopWebsite + "'" + ") ";
-		Constants.executingOfQurey(sqlQueryToInsert);
+		Constants.executingOfUpdate(sqlQueryToInsert);
+
+//		executing/.
+//		
+//		
+//		
+//		
+//		ResultSet rs = Constants.executingOfQurey(sqlQueryToInsert);
+//		try {
+//			System.out.print(" A New Shop Has Been Added These Are The Details Of It :" + rs.getString(shopName));
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 	}
 
