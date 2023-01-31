@@ -38,7 +38,10 @@ public class Products {
 	public static void updateProductPrice() {
 		System.out.println(" Please Provide Us With The Name Of The Product That Is On Discount !! ");
 		String productName = scanner.next();
-		String sqlQueryToUpdate = "  Update  from Items where itemName = '" + productName + "'";
+		System.out.println(" YAY !! What Is The New Price? ");
+		int productPrice = scanner.nextInt();
+		String sqlQueryToUpdate = "  Update Items SET unitPrice =" + productPrice + " where itemName = '" + productName
+				+ "'";
 		Constants.executingOfUpdate(sqlQueryToUpdate);
 
 	}
