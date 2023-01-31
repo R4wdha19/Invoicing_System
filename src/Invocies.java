@@ -38,7 +38,7 @@ public class Invocies {
 		System.out.println(" What Is The Invoice Id ? ");
 		int InvoiceId = scanner.nextInt();
 		String sqlQueryToSearch = "SELECT * FROM Invoice where InvoiceId =" + InvoiceId;
-		Constants.executingOfQurey(sqlQueryToSearch);
+
 		ResultSet results = Constants.executingOfQurey(sqlQueryToSearch);
 		try {
 			while (results.next()) {
@@ -53,9 +53,12 @@ public class Invocies {
 				int shopFaxNumber = results.getInt("shopFaxNumber");
 				String shopEmail = results.getString("shopEmail");
 				String shopWebsite = results.getString("shopWebsite");
-				System.out.println(invoiceId + " " + customerId + " " + invoiceDate + " " + numberOfItems + " "
-						+ totalAmount + " " + paidAmount + " " + balance + " " + shopContactNumber + " " + shopFaxNumber
-						+ " " + shopEmail + " " + shopWebsite);
+				System.out.println(" The Invoice Id Is: " + invoiceId + " The Customer Id Is :" + customerId
+						+ " The Date Is :" + invoiceDate + " The Number Of Items Purshased : " + numberOfItems
+						+ " The Total Amount Is : " + totalAmount + " The Amount Paid By The Customer : " + paidAmount
+						+ " The Remaining Amount " + balance + " The Shop Contact Number :" + shopContactNumber
+						+ " The Shop Fax Number " + shopFaxNumber + " The Shop Email Address : " + shopEmail
+						+ " The Shop Website Address : " + shopWebsite);
 
 			}
 		} catch (SQLException e) {
