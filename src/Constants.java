@@ -15,7 +15,7 @@ public class Constants {
 	public static void establishADataBaseConnection() {
 
 		System.out.println("To Start Saving Your Data, We Need To Connect To The Data Base,"
-				+ "/t /n Help Us By Providing The Following");
+				+ " Help Us By Providing The Following");
 		System.out.println(" What Is The Name Of Your DataBase ?");
 		String dataBaseName = scanner.next();
 		System.out.println(" What Is The UserName Of Your DataBase ?");
@@ -32,6 +32,8 @@ public class Constants {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+		CreatingTables.initDataBases();
+
 	}
 
 	public static void closingConnection() {
