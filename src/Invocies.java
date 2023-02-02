@@ -8,8 +8,6 @@ public class Invocies {
 	public static void insertInvoiceDetails() {
 		System.out.println(" What Is The Customer Id ? ");
 		int CustomerId = scanner.nextInt();
-		System.out.println(" What Is The Shop Id ? ");
-		int shopId = scanner.nextInt();
 		System.out.println(" What Is The Date Of The Invoice  ? ");
 		String invoiceDate = scanner.next();
 		System.out.println(" What Is The number Of Items? ");
@@ -20,14 +18,27 @@ public class Invocies {
 		int paidAmount = scanner.nextInt();
 		System.out.println(" What Is The balance ? ");
 		int balance = scanner.nextInt();
-		System.out.println(" What Is The Shop Contact Number ?");
-		int shopContactNumber = scanner.nextInt();
-		System.out.println(" What Is The Shop Fax Number ? ");
-		int shopFaxNumber = scanner.nextInt();
-		System.out.println(" What Is The Shop Email ? ");
-		String shopEmail = scanner.next();
-		System.out.println(" What Is The Shop Website ? ");
-		String shopWebsite = scanner.next();
+		System.out.println(" What Is The Shop Id ? ");
+		int shopId = scanner.nextInt();
+		String sqlQueryToGetValues = "Select h.shopContactNumber,h.shopFaxNumber,h.shopEmail,h.shopWebsite From Header h inner join  shop s on"
+				+ " h.headerId = s.headerId where s.shopId =";
+		ResultSet results = Constants.executingOfQurey(sqlQueryToGetValues);
+		int shopContactNumber = 0;
+		int shopFaxNumber = 0;
+		String shopEmail = "";
+		String shopWebsite = "";
+		try {
+
+			while (results.next()) {
+				shopContactNumber = results.getInt("shopContactNumber");
+				shopFaxNumber = results.getInt("shopFaxNumber");
+				shopEmail = results.getString("shopEmail");
+				shopWebsite = results.getString("shopEmail");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		String sqlQueryToInsert = "  INSERT INTO Invoice(CustomerId,shopId, invoiceDate, numberOfItems,"
 				+ "totalAmount ,paidAmount ,balance ,shopContactNumber,shopFaxNumber ,shopEmail,"

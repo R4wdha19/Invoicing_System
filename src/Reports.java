@@ -22,7 +22,7 @@ public class Reports {
 			}
 
 		} catch (SQLException e) {
-
+			e.printStackTrace();
 		}
 	}
 
