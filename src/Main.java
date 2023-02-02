@@ -51,7 +51,7 @@ public class Main {
 
 				break;
 			case 4:
-				Reports.reportsMenu();
+				ReportsMenu.reportsMenu();
 				break;
 			case 5:
 				Invocies.searchInvoice();
