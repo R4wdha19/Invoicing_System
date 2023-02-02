@@ -99,3 +99,7 @@ itemName VARCHAR(50) DEFAULT 'MK_Bags',
 unitPrice int DEFAULT 190,
 quantity int DEFAULT 5,
 quantityAmount int DEFAULT 1900);
+
+
+
+Select h.shopContactNumber,h.shopFaxNumber,h.shopEmail,h.shopWebsite From Header h inner join  shop s on h.headerId = s.headerId where s.shopId =
