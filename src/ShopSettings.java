@@ -7,8 +7,9 @@ public class ShopSettings {
 		System.out.println("Here Are The Settings Of Our System, Please Choose What You Want To Do :");
 		System.out.println(" 1 - Add A New Shop ");
 		System.out.println(" 2 - Load The Shop Data ");
-		System.out.println(" 3 - Set The Invoice Header ");
-		System.out.println(" 4 - Go Back To The Main Menu");
+		System.out.println(" 3 - Add A New Shop Header ");
+		System.out.println(" 4 - Set The Invoice Header ");
+		System.out.println(" 5 - Go Back To The Main Menu");
 
 		int input = scanner.nextInt();
 		switch (input) {
@@ -29,9 +30,12 @@ public class ShopSettings {
 
 			break;
 		case 3:
-			Shop.UpdateInvoiceHeader();
+			Shop.insertHeaderDetails();
 			break;
 		case 4:
+			Shop.UpdateInvoiceHeader();
+			break;
+		case 5:
 			Main.mainMenu();
 			break;
 

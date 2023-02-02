@@ -24,7 +24,15 @@ public class Main {
 			int input = scanner.nextInt();
 			switch (input) {
 			case 0:
-				Constants.establishADataBaseConnection();
+				System.out.println(
+						" Are You Establishing The Connection For The first time ? If Yes Press 1 If No Press 2  ");
+				int connectingToDBUserInput = scanner.nextInt();
+				if (connectingToDBUserInput == 1) {
+					Constants.establishADataBaseConnectionWithTablesCreation();
+
+				} else {
+					Constants.establishADataBaseConnection();
+				}
 				break;
 			case 1:
 				ShopSettings.shopSettingsMenu();

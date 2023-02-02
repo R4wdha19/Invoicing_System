@@ -10,8 +10,13 @@ customerPaymentMethod VARCHAR(20),
 );
 create table shop(
 shopId integer PRIMARY KEY IDENTITY(1,1),
+headerId int references Hearder(headerId),
 shopName VARCHAR(100),
-shopLocation VARCHAR(100),
+shopLocation VARCHAR(100)
+);
+
+create table Hearder(
+headerId integer PRIMARY KEY IDENTITY(1,1),
 shopContactNumber int,
 shopFaxNumber int,
 shopEmail VARCHAR(100),
