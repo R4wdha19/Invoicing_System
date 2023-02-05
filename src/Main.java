@@ -8,29 +8,25 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Main.mainMenu();
+		Constants.showMenu(1);
 	}
 
 	public static void mainMenu() {
 		Map<String, Integer> programStatistics = Customer.numberOfTimesAMainMenuOptionWasChosen();
 		try {
 			while (mainMenu) {
-				System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
-				System.out.println(" 11 - See All Menus");
-				System.out.println(" 0 - Start By Establishing A DataBase Connection To Load Your Data ");
-				System.out.println(" 1 - Shop Settings");
-				System.out.println(" 2 - Shop Management ");
-				System.out.println(" 3 - Create A New Invoice ");
-				System.out.println(" 4 - Get Reports ");
-				System.out.println(" 5 - Search An Invoice ");
-				System.out.println(" 6 - Program Statistics ");
-				System.out.println(" 7 - Exit ");
+//				System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
+//				System.out.println(" 0 - Start By Establishing A DataBase Connection To Load Your Data ");
+//				System.out.println(" 1 - Shop Settings");
+//				System.out.println(" 2 - Shop Management ");
+//				System.out.println(" 3 - Create A New Invoice ");
+//				System.out.println(" 4 - Get Reports ");
+//				System.out.println(" 5 - Search An Invoice ");
+//				System.out.println(" 6 - Program Statistics ");
+//				System.out.println(" 7 - Exit ");
 
 				int input = scanner.nextInt();
 				switch (input) {
-				case 11:
-					Constants.showMenu(choice);
-					break;
 				case 0:
 					programStatistics.put("Start By Establishing A DataBase Connection To Load Your Data",
 							programStatistics.get("Start By Establishing A DataBase Connection To Load Your Data") + 1);
@@ -53,14 +49,15 @@ public class Main {
 						Constants.establishADataBaseConnection();
 					}
 					break;
-
 				case 1:
 					programStatistics.put("Shop Settings", programStatistics.get("Shop Settings") + 1);
-					ShopSettings.shopSettingsMenu();
+					// ShopSettings.shopSettingsMenu();
+					Constants.showMenu(2);
 					break;
 				case 2:
 					programStatistics.put("Shop Management", programStatistics.get("Shop Management") + 1);
-					ShopItemManagement.manageShopMenu();
+//					ShopItemManagement.manageShopMenu();
+					Constants.showMenu(3);
 					break;
 				case 3:
 					programStatistics.put("Create A New Invoice", programStatistics.get("Create A New Invoice") + 1);
@@ -71,11 +68,11 @@ public class Main {
 						Customer.insertCustomerDetails();
 					}
 					Invocies.insertInvoiceDetails();
-
 					break;
 				case 4:
 					programStatistics.put("Get Reports", programStatistics.get("Get Reports") + 1);
-					ReportsMenu.reportsMenu();
+					// ReportsMenu.reportsMenu();
+					Constants.showMenu(3);
 					break;
 				case 5:
 					programStatistics.put("Search An Invoice", programStatistics.get("Search An Invoice") + 1);
