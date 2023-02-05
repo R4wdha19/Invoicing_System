@@ -44,7 +44,6 @@ public class CreatingTables {
 				+ "shopEmail VARCHAR(100) DEFAULT 'SheStore@gmail.com',"
 				+ "shopWebsite VARCHAR(100) DEFAULT 'www.SheStore.com');" + "create table Items("
 				+ "itemId integer PRIMARY KEY IDENTITY(1,1)," + "InvoiceId int references Invoice(InvoiceId),"
-				+ "itemName VARCHAR(50) DEFAULT 'MK_Bags'," + "unitPrice int DEFAULT 190," + "quantity int DEFAULT 5,"
 				+ "quantityAmount int DEFAULT 1900)";
 		Constants.executingOfQurey(sqlQueryToCreateTablesWithDefaultValues);
 	}
