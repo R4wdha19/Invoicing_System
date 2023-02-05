@@ -1,0 +1,4 @@
+Static variables caps _caps
+final is used to keep things without changing it
+declared the string objects in the main function 
+give values same as the names used in the list 

@@ -102,7 +102,7 @@ public class Constants {
 
 	}
 
-	public static void showMenu(Integer choice) {
+	public static void showMenu(Integer choice) {// This must be in a class called menu
 		List<String> mainMenu = Arrays
 				.asList(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:/r/n"
 						+ " 0 - Start By Establishing A DataBase Connection To Load Your Data /r/n "
