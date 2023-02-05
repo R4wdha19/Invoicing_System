@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Constants {
@@ -99,4 +101,47 @@ public class Constants {
 		}
 
 	}
+
+	public static void showMenu(Integer choice) {
+		List<String> mainMenu = Arrays
+				.asList(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:/r/n"
+						+ " 0 - Start By Establishing A DataBase Connection To Load Your Data /r/n "
+						+ " 1 - Shop Settings /r/n" + " 2 - Shop Management /r/n" + " 3 - Create A New Invoice /r/n "
+						+ " 4 - Get Reports /r/n" + " 5 - Search An Invoice /r/n " + " 6 - Program Statistics  /r/n"
+						+ " 7 - Exit /r/n");
+
+		List<String> menuForShopSettings = Arrays
+				.asList("Here Are The Settings Of Our System, Please Choose What You Want To Do :\r\n"
+						+ "	 1 - Add A New Shop \r\n" + "	 2 - Load The Shop Data \r\n"
+						+ "	 3 - Add A New Shop Header \r\n" + "	 4 - Set The Invoice Header \r\n"
+						+ "	 5 - Go Back To The Main Menu");
+		List<String> menuForShopManagment = Arrays.asList("What Would Like To Manage ?" + "1 - Add An Item "
+				+ "2 - Delete An Item " + "3 - Change The Price Of An Item" + "4 - Go Back To Main Menu ");
+		List<String> menuForPrintingReports = Arrays
+				.asList(" What Report You Would Like To See ? " + " 1 - The Shop Statistics " + " 2 - All The Invoices "
+						+ " 3 - All Shop Customers " + " 4 - All Shop Items" + " 5 - Go Back To Main Menu ");
+		switch (choice) {
+		case 1:
+			showList(mainMenu);
+			break;
+		case 2:
+			showList(menuForShopSettings);
+			break;
+		case 3:
+			showList(menuForShopManagment);
+			break;
+		case 4:
+			showList(menuForPrintingReports);
+			break;
+
+		}
+
+	}
+
+	public static void showList(List<String> stringList) {
+		for (String m : stringList) {
+			System.out.println(m);
+		}
+	}
+
 }

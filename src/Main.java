@@ -16,6 +16,7 @@ public class Main {
 		try {
 			while (mainMenu) {
 				System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
+				System.out.println(" 11 - See All Menus");
 				System.out.println(" 0 - Start By Establishing A DataBase Connection To Load Your Data ");
 				System.out.println(" 1 - Shop Settings");
 				System.out.println(" 2 - Shop Management ");
@@ -27,6 +28,9 @@ public class Main {
 
 				int input = scanner.nextInt();
 				switch (input) {
+				case 11:
+					Constants.showMenu(choice);
+					break;
 				case 0:
 					programStatistics.put("Start By Establishing A DataBase Connection To Load Your Data",
 							programStatistics.get("Start By Establishing A DataBase Connection To Load Your Data") + 1);
