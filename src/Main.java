@@ -1,4 +1,5 @@
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
 	}
 
 	public static void mainMenu() {
+		Map<String, Integer> programStatistics = Customer.numberOfTimesAMainMenuOptionWasChosen();
 		try {
 			while (mainMenu) {
 				System.out.println(" Welcome To Our Invoicing System, These Are The Services That Our System Provide:");
@@ -26,6 +28,8 @@ public class Main {
 				int input = scanner.nextInt();
 				switch (input) {
 				case 0:
+					programStatistics.put("Start By Establishing A DataBase Connection To Load Your Data",
+							programStatistics.get("Start By Establishing A DataBase Connection To Load Your Data") + 1);
 					System.out.println(
 							" Are You Establishing The Connection For The first time ? If Yes Press 1 If No Press 2  ");
 					int connectingToDBUserInput = scanner.nextInt();
@@ -45,13 +49,17 @@ public class Main {
 						Constants.establishADataBaseConnection();
 					}
 					break;
+
 				case 1:
+					programStatistics.put("Shop Settings", programStatistics.get("Shop Settings") + 1);
 					ShopSettings.shopSettingsMenu();
 					break;
 				case 2:
+					programStatistics.put("Shop Management", programStatistics.get("Shop Management") + 1);
 					ShopItemManagement.manageShopMenu();
 					break;
 				case 3:
+					programStatistics.put("Create A New Invoice", programStatistics.get("Create A New Invoice") + 1);
 					System.out.println(
 							" Are You Creating An Invoice For A New Customer ?" + "If Yes Press 1 If No Press 2 ");
 					int userInput = scanner.nextInt();
@@ -62,16 +70,23 @@ public class Main {
 
 					break;
 				case 4:
+					programStatistics.put("Get Reports", programStatistics.get("Get Reports") + 1);
 					ReportsMenu.reportsMenu();
 					break;
 				case 5:
+					programStatistics.put("Search An Invoice", programStatistics.get("Search An Invoice") + 1);
 					Invocies.searchInvoice();
 					break;
 				case 6:
-					System.out.println("Still Working On It SORRY !!  ");
+					programStatistics.put("Program Statistics", programStatistics.get("Program Statistics") + 1);
+					for (Map.Entry<String, Integer> x : programStatistics.entrySet()) {
+						System.out.println(x.getKey() + x.getValue());
+					}
+
 					break;
 
 				case 7:
+					programStatistics.put("Exit", programStatistics.get("Exit") + 1);
 					System.exit(0);
 					break;
 				}

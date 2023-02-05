@@ -1,13 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Products {
 	public static Scanner scanner = new Scanner(System.in);
-	List<Invocies> invoices = new ArrayList<>();
 
 	public static void insertProductsDetails() {
-		Invocies productInvoice = new Invocies();
+
 		System.out.println(" Enter The Number Of Products You Would Like To Add ");
 		int numberOfProducts = scanner.nextInt();
 		for (int i = 0; i < numberOfProducts; i++) {

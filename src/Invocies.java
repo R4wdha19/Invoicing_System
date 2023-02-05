@@ -1,11 +1,16 @@
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Invocies {
 	static Scanner scanner = new Scanner(System.in);
 
+	List<Products> product = new ArrayList<>();
+
 	public static void insertInvoiceDetails() {
+
 		System.out.println(" What Is The Customer Id ? ");
 		int CustomerId = scanner.nextInt();
 		System.out.println(" What Is The Date Of The Invoice  ? ");

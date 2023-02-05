@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Customer {
@@ -15,6 +17,20 @@ public class Customer {
 		String sqlQueryToInsert = "INSERT INTO Customers VALUES ( '" + customerName + "'," + customerContactNumber
 				+ ",'" + customerPaymentMethod + "'" + ") ";
 		Constants.executingOfUpdate(sqlQueryToInsert);
+
+	}
+
+	public static Map<String, Integer> numberOfTimesAMainMenuOptionWasChosen() {
+		Map<String, Integer> numberOfClicks = new HashMap<String, Integer>();
+		numberOfClicks.put("Start By Establishing A DataBase Connection To Load Your Data", 0);
+		numberOfClicks.put("Shop Settings", 0);
+		numberOfClicks.put("Shop Management", 0);
+		numberOfClicks.put("Create A New Invoice", 0);
+		numberOfClicks.put("Get Reports", 0);
+		numberOfClicks.put("Search An Invoice", 0);
+		numberOfClicks.put("Program Statistics", 0);
+		numberOfClicks.put("Exit", 0);
+		return numberOfClicks;
 
 	}
 }
