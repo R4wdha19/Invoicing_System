@@ -23,10 +23,8 @@ public class Shop {
 		int headerId = scanner.nextInt();
 		System.out.println(" What Is The Name Of The Shop ? ");
 		String shopName = scanner.next();
-
 		System.out.println(" What Is The Location Of The Shop ? ");
 		String shopLocation = scanner.next();
-
 		String sqlQueryToInsert = "  INSERT INTO shop (headerId,shopName,shopLocation)VALUES ( " + headerId + ",'"
 				+ shopName + " ',' " + shopLocation + "'" + ") ";
 		Constants.executingOfUpdate(sqlQueryToInsert);

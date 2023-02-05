@@ -21,7 +21,7 @@ public class Invocies {
 		System.out.println(" What Is The Shop Id ? ");
 		int shopId = scanner.nextInt();
 		String sqlQueryToGetValues = "Select h.shopContactNumber,h.shopFaxNumber,h.shopEmail,h.shopWebsite From Header h inner join  shop s on"
-				+ " h.headerId = s.headerId where s.shopId =";
+				+ " h.headerId = s.headerId where s.shopId =" + shopId;
 		ResultSet results = Constants.executingOfQurey(sqlQueryToGetValues);
 		int shopContactNumber = 0;
 		int shopFaxNumber = 0;
