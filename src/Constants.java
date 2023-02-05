@@ -54,7 +54,7 @@ public class Constants {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		CreatingTables.initDataBases();
+		CreatingTables.creatingEmptyTable();
 
 	}
 

@@ -30,6 +30,7 @@ public class Main {
 							" Are You Establishing The Connection For The first time ? If Yes Press 1 If No Press 2  ");
 					int connectingToDBUserInput = scanner.nextInt();
 					if (connectingToDBUserInput == 1) {
+						Constants.establishADataBaseConnection();
 						System.out.println("Do You Want To Create An Empty Tables ? Or Tables With Default Values ? "
 								+ "If You Want To Have Tables With Default Values Press 1"
 								+ "If Not Press Any Other Number");
@@ -37,7 +38,7 @@ public class Main {
 						if (UserInputToCreateTable == 1) {
 							CreatingTables.settingDefaultValues();
 						} else {
-							CreatingTables.initDataBases();
+							CreatingTables.creatingEmptyTable();
 						}
 
 					} else {

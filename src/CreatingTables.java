@@ -1,7 +1,7 @@
 
 public class CreatingTables {
 
-	public static void initDataBases() {
+	public static void creatingEmptyTable() {
 		String sqlQueriesToCreateTables = "create table Customers (" + "CustomerId integer PRIMARY KEY IDENTITY(1,1),"
 				+ "customername VARCHAR(100)," + "customerphoneNumber VARCHAR(50),"
 				+ "customerPaymentMethod VARCHAR(20)," + ");" + "create table Hearder("
